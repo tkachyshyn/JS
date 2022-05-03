@@ -65,7 +65,7 @@ class Kitchen {
         }
     } 
 
-    cookFastestOrder(){
+    async cookFastestOrder(){
         let time = 1000;
         let toCook;
         for(const order of this.orders){
@@ -84,7 +84,7 @@ class Kitchen {
         return toCook
     }
 
-    cookAllOrders(){
+    async cookAllOrders(){
         let res = this.orders;
         for(const order of this.orders){
             order.cook();
